@@ -30,7 +30,7 @@ def create_new_user(bridge_ip, user):
         elif response.get("success") is not None:
             user_name = response.get("success").get("username")
             print("\nSUCCESS : New user with username %s created" % user_name)
-            return 1
+            return user_name
 
         time.sleep(1)
 
@@ -39,13 +39,22 @@ def create_new_user(bridge_ip, user):
     return 0
 
 
-def main():
-    # get bridge information
-    bridge_info = get_bridge_info()
+def toggle_light(url, light):
+    body = '{"on":true}'
+    r = requests.put("%s/lights/3/state" % url, body)
+    print(r.json()[0])
 
-    # create a new user
-    bridge_ip = bridge_info.get('internalipaddress')
-    create_new_user(bridge_ip, "mjmtv")
+
+def main():
+    # # get bridge information
+    # bridge_info = get_bridge_info()
+
+    # # create a new user
+    # bridge_ip = bridge_info.get('internalipaddress')
+    # user_name = create_new_user(bridge_ip, "mjmtv")
+
+    url = "http://192.168.1.2/api/zxf8uotr3FIGEl2G3msqRfseTlEZeS0wOrMbOE2p"
+    toggle_light(url,3)
 
 
 if __name__ == '__main__':
