@@ -47,14 +47,6 @@ def main():
     # bridge_ip = bridge_info.get('internalipaddress')
     # user_name = create_new_user(bridge_ip, "mjmtv")
 
-    # url = "http://192.168.1.2/api/zxf8uotr3FIGEl2G3msqRfseTlEZeS0wOrMbOE2p"
-
-    # for i in range(100):
-    #     toggle_light(url, 3)
-    #     time.sleep(0.5)
-
-    # toggle_light(url, 3)
-
     url = "http://192.168.1.2/api/zxf8uotr3FIGEl2G3msqRfseTlEZeS0wOrMbOE2p/lights/3"
     kitchen = Light(url)
 
