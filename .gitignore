@@ -1,2 +1,5 @@
 # Ignoring pycharm specific directories
 .idea/
+
+# Ignoring cache files
+pyHue/__pycache__
