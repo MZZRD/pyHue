@@ -47,7 +47,7 @@ def main():
     # bridge_ip = bridge_info.get('internalipaddress')
     # user_name = create_new_user(bridge_ip, "mjmtv")
 
-    url = "http://192.168.1.2/api/zxf8uotr3FIGEl2G3msqRfseTlEZeS0wOrMbOE2p/lights/3"
+    url = "http://[ip address]/api/[api_key]/lights/[x]"
     kitchen = Light(url)
 
     print(kitchen.on)
